@@ -9,10 +9,15 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
         <module>jwarpack-packager</module>
         <module>jwarpack-cli</module>
-        <module>jwarpack-jetty6</module>
+        <module>jwarpack-maven-plugin</module>
+        <module>jwarpack-es</module>
     </modules>
 
 </project>

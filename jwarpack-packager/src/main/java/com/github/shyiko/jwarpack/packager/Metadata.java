@@ -56,7 +56,8 @@ public class Metadata {
             throw new IllegalArgumentException("Output file must be specified");
         }
         File output = new File(outputFile);
-        if ((!output.exists() && outputFile.endsWith(File.pathSeparator)) || output.isDirectory()) {
+        if ((!output.exists() && (outputFile.endsWith("\\") || outputFile.endsWith("/")))
+                || output.isDirectory()) {
             output.mkdirs();
             output = new File(output, generateOutputJarName(applicationFile));
         }

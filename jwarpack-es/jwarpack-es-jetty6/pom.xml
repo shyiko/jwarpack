@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.shyiko.jwarpack</groupId>
-        <artifactId>jwarpack</artifactId>
+        <groupId>com.github.shyiko.jwarpack.es</groupId>
+        <artifactId>jwarpack-es</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jwarpack-jetty6</artifactId>
+    <artifactId>jwarpack-es-jetty6</artifactId>
 
     <dependencies>
         <dependency>
