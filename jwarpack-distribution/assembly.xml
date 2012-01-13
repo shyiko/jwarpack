@@ -1,0 +1,37 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib/es</outputDirectory>
+            <includes>
+                <include>*:jwarpack-es-*</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <outputDirectory/>
+            <includes>
+                <include>*:jwarpack-cli</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>samples</directory>
+            <excludes>
+                <exclude>**/target</exclude>
+                <exclude>**/target/**</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>..</directory>
+            <outputDirectory/>
+            <includes>
+                <include>readme.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

@@ -16,6 +16,7 @@
 
     <modules>
         <module>jwarpack-es-jetty6</module>
+        <module>jwarpack-es-jetty6-with-jsp-support</module>
     </modules>
 
 </project>

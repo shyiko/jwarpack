@@ -10,25 +10,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jwarpack-es-jetty6</artifactId>
+    <artifactId>jwarpack-es-jetty6-with-jsp-support</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.mortbay.jetty</groupId>
-            <artifactId>jetty</artifactId>
-            <version>6.1.26</version>
+            <groupId>com.github.shyiko.jwarpack.es</groupId>
+            <artifactId>jwarpack-es-jetty6</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-<!--
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jsp-2.1-jetty</artifactId>
             <version>6.1.26</version>
-        </dependency>
--->
-        <dependency>
-            <groupId>com.beust</groupId>
-            <artifactId>jcommander</artifactId>
-            <version>1.13</version>
         </dependency>
     </dependencies>
 

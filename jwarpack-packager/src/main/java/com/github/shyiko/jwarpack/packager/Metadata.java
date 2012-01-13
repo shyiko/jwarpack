@@ -61,6 +61,7 @@ public class Metadata {
             output.mkdirs();
             output = new File(output, generateOutputJarName(applicationFile));
         }
+        output.getParentFile().mkdirs();
         this.outputJar = output;
         this.useCompression = useCompression;
     }

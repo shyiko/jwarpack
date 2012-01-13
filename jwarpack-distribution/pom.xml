@@ -10,35 +10,23 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jwarpack-cli</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.github.shyiko.jwarpack</groupId>
-            <artifactId>jwarpack-packager</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <artifactId>jwarpack-distribution</artifactId>
+    <packaging>pom</packaging>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-1</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.github.shyiko.jwarpack.cli.EntryPoint</mainClass>
-                        </manifest>
-                    </archive>
-                    <appendAssemblyId>false</appendAssemblyId>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
+                    <descriptors>
+                        <descriptor>assembly.xml</descriptor>
+                    </descriptors>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>include-dependencies</id>
+                        <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -48,5 +36,23 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.shyiko.jwarpack</groupId>
+            <artifactId>jwarpack-cli</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shyiko.jwarpack.es</groupId>
+            <artifactId>jwarpack-es-jetty6</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shyiko.jwarpack.es</groupId>
+            <artifactId>jwarpack-es-jetty6-with-jsp-support</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
