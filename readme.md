@@ -58,7 +58,7 @@ After that, application can be run using "`java -jar yourapp-standalone.jar star
     
 ###CLI###
 
-            java -jar jwarpack-cli-1.0.jar jwarpack-distribution-1.0/es/jwarpack-jetty6-1.0.jar yourapp.war yourapp-standalone.jar
+    java -jar jwarpack-cli-1.0.jar jwarpack-distribution-1.0/es/jwarpack-jetty6-1.0.jar yourapp.war yourapp-standalone.jar
 
 History
 ---------------
